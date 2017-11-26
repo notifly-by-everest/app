@@ -87,12 +87,14 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__routeComponents_select_time_select_time_component__ = __webpack_require__("../../../../../src/app/routeComponents/select-time/select-time.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__routeComponents_input_details_input_details_component__ = __webpack_require__("../../../../../src/app/routeComponents/input-details/input-details.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__routeComponents_confirmation_confirmation_component__ = __webpack_require__("../../../../../src/app/routeComponents/confirmation/confirmation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__routeComponents_select_organization_select_organization_component__ = __webpack_require__("../../../../../src/app/routeComponents/select-organization/select-organization.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -119,7 +121,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__routeComponents_select_date_select_date_component__["a" /* SelectDateComponent */],
             __WEBPACK_IMPORTED_MODULE_10__routeComponents_select_time_select_time_component__["a" /* SelectTimeComponent */],
             __WEBPACK_IMPORTED_MODULE_11__routeComponents_input_details_input_details_component__["a" /* InputDetailsComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__routeComponents_confirmation_confirmation_component__["a" /* ConfirmationComponent */]
+            __WEBPACK_IMPORTED_MODULE_12__routeComponents_confirmation_confirmation_component__["a" /* ConfirmationComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__routeComponents_select_organization_select_organization_component__["a" /* SelectOrganizationComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -152,6 +155,7 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routeComponents_select_time_select_time_component__ = __webpack_require__("../../../../../src/app/routeComponents/select-time/select-time.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routeComponents_input_details_input_details_component__ = __webpack_require__("../../../../../src/app/routeComponents/input-details/input-details.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__routeComponents_confirmation_confirmation_component__ = __webpack_require__("../../../../../src/app/routeComponents/confirmation/confirmation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__routeComponents_select_organization_select_organization_component__ = __webpack_require__("../../../../../src/app/routeComponents/select-organization/select-organization.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -165,11 +169,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     { path: '',
-        redirectTo: '/select-a-trainer',
+        redirectTo: '/select-organization/fitness',
         pathMatch: 'full' },
-    { path: 'select-a-trainer', component: __WEBPACK_IMPORTED_MODULE_2__routeComponents_select_trainer_select_trainer_component__["a" /* SelectTrainerComponent */] },
+    { path: 'select-a-trainer/:org_name_internal', component: __WEBPACK_IMPORTED_MODULE_2__routeComponents_select_trainer_select_trainer_component__["a" /* SelectTrainerComponent */] },
+    { path: 'select-organization/:org_type', component: __WEBPACK_IMPORTED_MODULE_7__routeComponents_select_organization_select_organization_component__["a" /* SelectOrganizationComponent */] },
+    { path: 'select-partner', component: __WEBPACK_IMPORTED_MODULE_2__routeComponents_select_trainer_select_trainer_component__["a" /* SelectTrainerComponent */] },
     { path: 'select-date', component: __WEBPACK_IMPORTED_MODULE_3__routeComponents_select_date_select_date_component__["a" /* SelectDateComponent */] },
     { path: 'select-time', component: __WEBPACK_IMPORTED_MODULE_4__routeComponents_select_time_select_time_component__["a" /* SelectTimeComponent */] },
     { path: 'input-details', component: __WEBPACK_IMPORTED_MODULE_5__routeComponents_input_details_input_details_component__["a" /* InputDetailsComponent */] },
@@ -762,6 +769,95 @@ var _a, _b, _c, _d;
 
 /***/ }),
 
+/***/ "../../../../../src/app/routeComponents/select-organization/select-organization.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".pre-header {\n    border-bottom: 1px solid black;\n}\n.pre-header h5 {\n    margin-left: 1em;\n}\n\n.header {\n    border-bottom: 1px solid black;\n}\n.header h2 {\n    font-size: 54px;\n    font-weight: 300;\n}\n\n\n.org {\n    margin-top: 3em;\n    margin-bottom: 3em;\n}\n.orgName {\n    font-size: 30px;\n    font-weight: 300;\n    margin-bottom: 0.5em;\n    margin-top: 1em;\n}\n.org_btn {\n    font-size: 18px;\n    background-color: #bababa;\n    padding: 7px 24px;\n    padding-bottom: 9px;\n    border-radius: 25px;\n    border: none;\n    color: white;\n    margin: 0px 10px;\n    font-weight: 300;\n    transition: background-color 0.5s ease;\n}\n.org_btn:hover {\n    background-color: #9a9a9a;\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/routeComponents/select-organization/select-organization.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"\">\n  <!-- Pre-Header -->\n  <div class=\"row pre-header\">\n    <div class=\"col-sm-10 col-sm-offset-1\">\n      <h5>Notifly Partners</h5> \n    </div>\n  </div>\n\n  <!-- Header -->\n  <div class=\"row header text-center\">\n    <div class=\"col-sm-10 col-sm-offset-1\">\n        <h2>{{org_type}}</h2>\n    </div>\n  </div>\n\n  <div class=\"row text-center\">\n    <div class=\"col-sm-10 col-sm-offset-1\">\n\n      <div class=\"org\" *ngFor=\"let org of orgs_by_type\">\n        <h4 class=\"orgName\">{{org.name}}</h4>\n        <button class=\"btn org_btn\" (click)=\"selectOrg(org)\">See All Trainers</button>\n\n        <!-- <div class=\"trainers\">\n          <button class=\"btn\" *ngFor=\"let trainer of org.trainers\">{{trainer.name}}</button>\n        </div> -->\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/routeComponents/select-organization/select-organization.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectOrganizationComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_web_service__ = __webpack_require__("../../../../../src/app/services/web.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var SelectOrganizationComponent = (function () {
+    function SelectOrganizationComponent(route, _webSrv, _router) {
+        this.route = route;
+        this._webSrv = _webSrv;
+        this._router = _router;
+        this.orgs_by_type = [];
+    }
+    SelectOrganizationComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route_sub = this.route.params.subscribe(function (params) {
+            _this.org_type = params['org_type'].toUpperCase(); // (+) converts string 'id' to a number
+            _this.getAllOrgsByType();
+        });
+    };
+    SelectOrganizationComponent.prototype.getAllOrgsByType = function () {
+        var _this = this;
+        this._webSrv.getOrgsByType(this.org_type.toLowerCase())
+            .subscribe(function (orgs) {
+            _this.orgs_by_type = JSON.parse(orgs['_body']);
+            console.log(_this.orgs_by_type);
+        });
+    };
+    SelectOrganizationComponent.prototype.selectOrg = function (org) {
+        console.log(org['org_name_internal']);
+        this._webSrv.org_environment_object = org;
+        this._router.navigate(['select-a-trainer', org['org_name_internal']]);
+    };
+    return SelectOrganizationComponent;
+}());
+SelectOrganizationComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-select-organization',
+        template: __webpack_require__("../../../../../src/app/routeComponents/select-organization/select-organization.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/routeComponents/select-organization/select-organization.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_web_service__["a" /* WebService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_web_service__["a" /* WebService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _c || Object])
+], SelectOrganizationComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=select-organization.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/routeComponents/select-time/select-time.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -945,7 +1041,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img {\n    max-width: 240px;\n}\n\nh3 {\n    margin-top: 1em;\n}\n\n.trainer {\n    margin-left: 10px;\n    margin-right: 10px;\n    background-color: #e0e0e0;\n    transition: background-color 0.5s ease;\n}\n.trainer:hover {\n    background-color: #bbbbbb;\n}\n\n.logo {\n    width: 150px;\n}", ""]);
+exports.push([module.i, ".img {\n    max-width: 240px;\n}\n\nh3 {\n    margin-top: 1em;\n}\n\n.trainer {\n    margin-left: 10px;\n    margin-right: 10px;\n    background-color: #e0e0e0;\n    transition: background-color 0.5s ease;\n}\n.trainer:hover {\n    background-color: #bbbbbb;\n}\n\n.logo {\n    width: 150px;\n}\n\n.spinner {\n    width: 40px;\n    height: 40px;\n  \n    position: relative;\n    margin: 40px auto;\n  }\n  \n  .double-bounce1, .double-bounce2 {\n    width: 100%;\n    height: 100%;\n    border-radius: 50%;\n    background-color: #333;\n    opacity: 0.6;\n    position: absolute;\n    top: 0;\n    left: 0;\n    \n    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;\n    animation: sk-bounce 2.0s infinite ease-in-out;\n  }\n  \n  .double-bounce2 {\n    -webkit-animation-delay: -1.0s;\n    animation-delay: -1.0s;\n  }\n  \n  @-webkit-keyframes sk-bounce {\n    0%, 100% { -webkit-transform: scale(0.0) }\n    50% { -webkit-transform: scale(1.0) }\n  }\n  \n  @keyframes sk-bounce {\n    0%, 100% { \n      transform: scale(0.0);\n      -webkit-transform: scale(0.0);\n    } 50% { \n      transform: scale(1.0);\n      -webkit-transform: scale(1.0);\n    }\n  }", ""]);
 
 // exports
 
@@ -958,7 +1054,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/routeComponents/select-trainer/select-trainer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- \n  - Header w/ name of biz\n  - Img of biz logo\n  - List of trainers (as buttons)\n -->\n<div class=\"container\">\n  <div class=\"row header text-center\">\n    <div class=\"col-sm-10 col-sm-offset-1\">\n      <img class=\"logo\" src=\"{{env.org_logo_url}}\" alt=\"\">\n      <h3 class=\"partner_name\">{{env.org_name}}</h3>\n      <h5 class=\"partner_city\">{{env.org_city}}, {{env.org_region}}</h5>\n      <p  class=\"partner_descrip\">{{env.org_tagline}}</p>\n      <br>\n\n      <div class=\"trainers\">\n        <button class=\"btn trainer\" *ngFor=\"let trainer of trainers_arr\" routerLink=\"/select-date\" [queryParams]=\"{ trainer_key: trainer.userKey, trainer_name: trainer.firstName }\">\n          {{trainer.firstName}} {{trainer.lastName}}\n        </button>\n      </div> \n    </div>\n  </div>\n</div>"
+module.exports = "<!-- \n  - Header w/ name of biz\n  - Img of biz logo\n  - List of trainers (as buttons)\n -->\n<div class=\"container\">\n  <div class=\"row header text-center\">\n    <div class=\"col-sm-10 col-sm-offset-1\">\n      <img class=\"logo\" src=\"{{org_logo_url}}\" alt=\"\">\n      <h3 class=\"partner_name\">{{org_name}}</h3>\n      <h5 class=\"partner_city\">{{org_city}}, {{org_region}}</h5>\n      <p  class=\"partner_descrip\">{{org_tagline}}</p>\n      <br>\n\n      <div class=\"spinner\" *ngIf=\"!trainers_loaded\">\n        <div class=\"double-bounce1\"></div>\n        <div class=\"double-bounce2\"></div>\n      </div>\n\n      <div class=\"trainers\" *ngIf=\"trainers_loaded\">\n        <button class=\"btn trainer\" *ngFor=\"let trainer of trainers_arr\" routerLink=\"/select-date\" [queryParams]=\"{ trainer_key: trainer.userKey, trainer_name: trainer.firstName }\">\n          {{trainer.firstName}} {{trainer.lastName}}\n        </button>\n      </div> \n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -982,26 +1078,70 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SelectTrainerComponent = (function () {
-    function SelectTrainerComponent(_webSrv, _router) {
+    function SelectTrainerComponent(_webSrv, _router, _route) {
         this._webSrv = _webSrv;
         this._router = _router;
+        this._route = _route;
         this.trainers_arr = [];
+        this.trainers_loaded = false;
     }
     SelectTrainerComponent.prototype.ngOnInit = function () {
         var _this = this;
         // Get & set copy
         this.env = this._webSrv.environment_object;
-        this.trainers = this._webSrv.getTrainers();
-        this.trainers.subscribe(function (trainers) {
-            var trainserObj = JSON.parse(trainers['_body']);
-            _this.trainers_arr = [];
-            for (var key in trainserObj) {
-                _this.trainers_arr.push(trainserObj[key]);
-            }
-            console.log(_this.trainers_arr);
-            _this._webSrv.trainers_arr = _this.trainers_arr;
-        });
+        this.org_logo_url = this.env.org_logo_url;
+        this.org_name = this.env.org_name;
+        this.org_city = this.env.org_city;
+        this.org_region = this.env.org_region;
+        this.org_tagline = this.env.org_tagline;
+        if (this._webSrv.org_environment_object) {
+            console.log(this._webSrv.org_environment_object);
+            this.org_name = this._webSrv.org_environment_object['name'];
+            this.route_sub = this._route.params.subscribe(function (params) {
+                _this.org_name_internal = params['org_name_internal'];
+                // Get the trainers
+                _this.trainers = _this._webSrv.getTrainersByOrg(_this.org_name_internal);
+                _this.trainers.subscribe(function (trainers) {
+                    var trainserObj = JSON.parse(trainers['_body']);
+                    _this.trainers_arr = [];
+                    for (var key in trainserObj) {
+                        _this.trainers_arr.push(trainserObj[key]);
+                    }
+                    console.log(_this.trainers_arr);
+                    _this._webSrv.trainers_arr = _this.trainers_arr;
+                    _this.trainers_loaded = true;
+                });
+            });
+        }
+        else {
+            // get the org's name from url
+            // get the org's data from DB
+            // set webSrv var
+            this.route_sub = this._route.params.subscribe(function (params) {
+                _this.org_name_internal = params['org_name_internal'];
+                _this._webSrv.getOrgData(_this.org_name_internal)
+                    .subscribe(function (res) {
+                    var orgData = JSON.parse(res['_body']);
+                    _this._webSrv.org_environment_object = orgData;
+                    _this.org_name = _this._webSrv.org_environment_object['name'];
+                    // Get the trainers
+                    _this.trainers = _this._webSrv.getTrainersByOrg(_this.org_name_internal);
+                    _this.trainers.subscribe(function (trainers) {
+                        var trainserObj = JSON.parse(trainers['_body']);
+                        _this.trainers_arr = [];
+                        for (var key in trainserObj) {
+                            _this.trainers_arr.push(trainserObj[key]);
+                        }
+                        console.log(_this.trainers_arr);
+                        _this._webSrv.trainers_arr = _this.trainers_arr;
+                        _this.trainers_loaded = true;
+                    });
+                });
+            });
+            // this._router.navigate(['select-organization', 'fitness'])
+        }
     };
     return SelectTrainerComponent;
 }());
@@ -1011,10 +1151,10 @@ SelectTrainerComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/routeComponents/select-trainer/select-trainer.component.html"),
         styles: [__webpack_require__("../../../../../src/app/routeComponents/select-trainer/select-trainer.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_web_service__["a" /* WebService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_web_service__["a" /* WebService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_web_service__["a" /* WebService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_web_service__["a" /* WebService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object])
 ], SelectTrainerComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=select-trainer.component.js.map
 
 /***/ }),
@@ -1143,15 +1283,28 @@ var WebService = (function () {
         this.selected_slot = null;
         this.baseURL = '';
         this.environment_object = null;
+        this.org_environment_object = null;
         this.submissionResponse = null;
         this.environment_object = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */];
         this.baseURL = this.environment_object['base_url'];
     }
+    WebService.prototype.getOrgData = function (org_name) {
+        return this._http.get(this.baseURL + '/getOrgData?org_name=' + org_name)
+            .map(function (res) { return res; });
+    };
+    WebService.prototype.getOrgsByType = function (org_type) {
+        return this._http.get(this.baseURL + '/getOrgByType?org_type=' + org_type)
+            .map(function (res) { return res; });
+    };
     WebService.prototype.selectTrainerCall = function (trainer) {
         return "Saved trainer " + trainer;
     };
     WebService.prototype.getTrainers = function () {
         return this._http.get(this.baseURL + '/getTrainers')
+            .map(function (res) { return res; });
+    };
+    WebService.prototype.getTrainersByOrg = function (org_name) {
+        return this._http.get(this.baseURL + '/getTrainersByOrg?org_name=' + org_name)
             .map(function (res) { return res; });
     };
     WebService.prototype.getTrainerScheduleTillEOM = function (trainer_key, month) {
